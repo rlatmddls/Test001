@@ -1,0 +1,13 @@
+여러 갤러리 배포 템플릿
+
+1. 템플릿 폴더 안의 내용물을 GitHub 로컬 저장소 루트에 복사합니다.
+2. 첫 WebGL 빌드의 index.html, Build, TemplateData를 001 안에 복사합니다. 안내용 index.html은 교체합니다.
+3. 두 번째 빌드의 내용물은 002 안에 복사합니다. StreamingAssets가 있으면 각 공간에 함께 넣습니다.
+4. vercel.json은 저장소 루트에 하나만 둡니다. 기존 단일 공간용 설정을 교체하기 전에 기존 설정을 확인하세요.
+5. Vercel Root Directory는 001이 아닌 저장소 루트입니다. Other / Build·Install 빈 값 / Output . 을 사용합니다.
+6. Commit 후 Push하고 배포 Ready를 확인합니다. /001/과 /002/에 접속합니다.
+
+주의
+- 파일 이름과 대소문자를 유지하세요. index.html의 buildUrl은 기본 상대 경로 "Build"를 유지합니다.
+- GitHub 일반 저장소는 개별 파일 100 MiB 초과 업로드를 차단합니다. Git LFS를 켜는 것만으로 호스팅 문제까지 해결되지는 않습니다.
+- 실제 Vercel 배포와 압축 응답 확인은 업로드 후 진행해야 합니다.
